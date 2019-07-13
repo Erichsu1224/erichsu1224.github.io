@@ -13,6 +13,9 @@
     
 
     
+        <meta name="description" content="2019 NCPU
+這次的比賽在測試賽時，蠻順利的稍微確認一下團隊默契，很快解完三題測試題就出來了。但忘記測試C++11的&amp;lt;bits/stdc++&amp;gt;是否可以使用是這次的疏忽。—正式賽—這是解題順序分別是PA(11m) 直接丟給學弟寫。PB(16m) 看完題目發現是找binary的1，直覺">
+    
 
     <!--Author-->
     
@@ -21,10 +24,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Eric&#39;s Blog">
+        <meta property="og:title" content="NCPU2019">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="2019 NCPU
+這次的比賽在測試賽時，蠻順利的稍微確認一下團隊默契，很快解完三題測試題就出來了。但忘記測試C++11的&amp;lt;bits/stdc++&amp;gt;是否可以使用是這次的疏忽。—正式賽—這是解題順序分別是PA(11m) 直接丟給學弟寫。PB(16m) 看完題目發現是找binary的1，直覺">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +38,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>page - Archives: 2019 - Eric&#39;s Blog</title>
+    <title>NCPU2019 - Eric&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,103 +159,75 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2019</h1>
+                <div class="post-heading">
+                    <h1>NCPU2019</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-07-13
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/NCPU/">#NCPU</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/03/25/2019-3-25/">
-        <h1 class="post-title archive">
-            2019-3-25
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-03-25
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/03/23/2019-3-23/">
-        <h1 class="post-title archive">
-            2019-3-23
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-03-23
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>2019 NCPU</p>
+<p>這次的比賽在測試賽時，蠻順利的稍微確認一下團隊默契，很快解完三題測試題就出來了。但忘記測試C++11的&lt;bits/stdc++&gt;是否可以使用是這次的疏忽。<br>—正式賽—<br>這是解題順序分別是<br>PA(11m) 直接丟給學弟寫。<br>PB(16m) 看完題目發現是找binary的1，直覺就直接跑loop建表，而正在coding時又想到可以用prefix讓整體查詢變O(1)。<br>PE(40m) 從output開始找規律，發現圖的每個位子都是上一個圖的左邊+同位子+下面的和，再加上三圍陣列作儲存，可以推出graph[n][i][j] = graph[n-1][i-1][j]+graph[n-1][i][j]+graph[n-1][i][j-1]，建完表後答案就出來了，幸運的是這題剛好首殺。<br>PD(102m) 這題也是學弟寫的，幾本上就是丟掉不要的直接做operater overloading(這題他測資打錯，造成浪費了無謂的時間在debug，下次要注意）<br>PF(181m) 這題算是我在這次比賽失誤較為嚴重的題目了，比賽中知道這題是資結講過的後續追蹤也曾經練習過code，但由於平常都是練數字的部分，在字串儲存的部分發現的一些問題，最後只好選擇使用暴力解的方式，每次遇到數字就去找他的左括號所對應的右括號，並且直接複製字串直接插入。<br>PE(236m) 這題是小郭解的，一開始他用vector的insert和erase的方式去做submit發現是RuntimeError，前前後後修改但總共交錯5次，最後半小時大家決定用swap的方式不管會不會TLE暴力解決，沒想到丟上去就AC了，差點就沒有前十名了。<br>最後PG卡在用minimum spanning tree去解，但無法解決例如數字8的圖形時，會有共邊因而只會判斷出2個cycle而不是3個，PH到後面其實沒太大心思看，只有聽學弟說是個數論。</p>
+<p>整題來說對於這次比賽還算滿意，最終解出6題拿了銀獎，整體來說在圖論和Standard Library還不夠熟練，接下來還有TOPC NCPC ICPC，加油。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/03/22/2019-3-22/">
-        <h1 class="post-title archive">
-            2019-3-22
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-03-22
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/03/20/2019-3-20/">
-        <h1 class="post-title archive">
-            2019.3.20 
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-03-20
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/03/18/Music/">
-        <h1 class="post-title archive">
-            Music
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-03-18
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/archives/2019/">&larr;  Newer Posts</a></li>
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr>
